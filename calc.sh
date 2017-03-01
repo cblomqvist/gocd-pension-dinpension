@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 INKOMSTPENSION=$(cat target/inkomstpension.txt)
 PREMIEPENSION=$(cat target/premiepension.txt)
@@ -17,7 +18,7 @@ echo "
 <td>${PREMIEPENSION}</td>
 </tr>
 <tr>
-<td>Tjänstepension</td>
+<td>Tj&auml;nstepension</td>
 <td>${TJANSTEPENSION}</td>
 </tr>
 <tr>
