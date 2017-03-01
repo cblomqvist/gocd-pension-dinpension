@@ -1,3 +1,4 @@
+set -e
 INKOMSTPENSION=$(cat target/inkomstpension.txt)
 PREMIEPENSION=$(cat target/premiepension.txt)
 TJANSTEPENSION=$(cat target/tjanstepension.txt)
