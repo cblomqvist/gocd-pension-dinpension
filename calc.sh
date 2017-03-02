@@ -1,10 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
-INKOMSTPENSION=$(cat target/inkomstpension.txt)
-PREMIEPENSION=$(cat target/premiepension.txt)
-TJANSTEPENSION=$(cat target/tjanstepension.txt)
-PRIVATPENSION=$(cat target/privatpension.txt)
+mkdir -p output
+INKOMSTPENSION=$(cat input/inkomstpension.txt)
+PREMIEPENSION=$(cat input/premiepension.txt)
+TJANSTEPENSION=$(cat input/tjanstepension.txt)
+PRIVATPENSION=$(cat input/privatpension.txt)
 TOTALT=$(echo "scale=0; (${INKOMSTPENSION} + ${PREMIEPENSION} + ${TJANSTEPENSION} + ${PRIVATPENSION}) / 1" | bc -l)
+
 echo "
 <h1>Din pension</h1>
 <table>
@@ -31,5 +33,5 @@ echo "
 </tr>
 </tbody>
 </table>
-" > target/dinpension.html
+" > output/dinpension.html
 
