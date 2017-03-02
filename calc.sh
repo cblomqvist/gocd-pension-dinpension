@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -e
 mkdir -p output
-INKOMSTPENSION=$(cat input/inkomstpension/res.txt)
-PREMIEPENSION=$(cat input/premiepension/res.txt)
-TJANSTEPENSION=$(cat input/tjanstepension/res.txt)
-PRIVATPENSION=$(cat input/privatpension/res.txt)
+INPUT=upstream/output
+INKOMSTPENSION=$(cat ${INPUT}/inkomstpension.txt)
+PREMIEPENSION=$(cat ${INPUT}/premiepension.txt)
+TJANSTEPENSION=$(cat ${INPUT}/tjanstepension.txt)
+PRIVATPENSION=$(cat ${INPUT}/privatpension.txt)
 TOTALT=$(echo "scale=0; (${INKOMSTPENSION} + ${PREMIEPENSION} + ${TJANSTEPENSION} + ${PRIVATPENSION}) / 1" | bc -l)
 
 echo "
