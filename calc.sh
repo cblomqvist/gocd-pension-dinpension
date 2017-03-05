@@ -9,6 +9,8 @@ PRIVATPENSION=$(cat ${INPUT}/privatpension.txt)
 TOTALT=$(echo "scale=0; (${INKOMSTPENSION} + ${PREMIEPENSION} + ${TJANSTEPENSION} + ${PRIVATPENSION}) / 1" | bc -l)
 
 echo "
+<html>
+<body>
 <h1>Din pension</h1>
 <table>
 <tbody>
@@ -34,5 +36,7 @@ echo "
 </tr>
 </tbody>
 </table>
+</body>
+</html>
 " > output/dinpension.html
 
