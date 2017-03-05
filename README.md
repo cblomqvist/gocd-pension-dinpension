@@ -1,4 +1,4 @@
-# gocd-pension-dinpension
+# dinpension
 Sammanställer din pension
 
 * Summerar din totala pension
